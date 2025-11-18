@@ -4,8 +4,8 @@ from typing import List
 from urllib.parse import urlencode
 import logging
 
-from src.scanners.base import BaseScanner
-from src.models import (
+from continental.operators.base import BaseScanner
+from continental.models import (
     Finding, Severity, VulnerabilityCategory, Remediation,
     ProofOfConcept, HTTPRequest, HTTPResponse
 )

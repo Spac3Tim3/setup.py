@@ -7,7 +7,7 @@ from urllib3.util.retry import Retry
 import time
 import logging
 
-from src.models import Finding, ScanTarget, Severity
+from continental.models import Finding, ScanTarget, Severity
 
 logger = logging.getLogger(__name__)
 

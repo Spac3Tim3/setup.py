@@ -1,7 +1,7 @@
 """Integration tests for SQL injection scanner."""
 import pytest
-from src.scanners.sqli_scanner import SQLiScanner
-from src.models import ScanTarget, Severity
+from continental.operators.sqli_scanner import SQLiScanner
+from continental.models import ScanTarget, Severity
 
 
 @pytest.fixture

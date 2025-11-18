@@ -3,12 +3,12 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ai-bug-bounty-hunter"
-version = "0.1.0"
-description = "AI-powered security testing platform"
+name = "continental-platform"
+version = "1.0.0"
+description = "The Continental - Professional Security Intelligence Platform"
 requires-python = ">=3.11"
 authors = [
-    {name = "Your Team", email = "team@example.com"}
+    {name = "The Continental", email = "concierge@continental.security"}
 ]
 
 [tool.pytest.ini_options]
@@ -16,7 +16,7 @@ testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-addopts = "-v --cov=src --cov-report=html --cov-report=term"
+addopts = "-v --cov=continental --cov-report=html --cov-report=term"
 
 [tool.black]
 line-length = 100

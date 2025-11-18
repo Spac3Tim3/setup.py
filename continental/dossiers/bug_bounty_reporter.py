@@ -5,7 +5,7 @@ from typing import List, Optional
 from pathlib import Path
 import logging
 
-from src.models import ScanReport, Finding, Severity
+from continental.models import ScanReport, Finding, Severity
 
 logger = logging.getLogger(__name__)
 

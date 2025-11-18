@@ -4,12 +4,12 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime, timedelta
 import time
 
-from src.models import (
+from continental.models import (
     ScanConfig, ScanReport, ScanTarget, Finding, Severity
 )
-from src.scanners.sqli_scanner import SQLiScanner
-from src.scanners.xss_scanner import XSSScanner
-from src.analyzers.ai_analyzer import AIAnalyzer
+from continental.operators.sqli_scanner import SQLiScanner
+from continental.operators.xss_scanner import XSSScanner
+from continental.intelligence.ai_analyzer import AIAnalyzer
 
 logger = logging.getLogger(__name__)
 

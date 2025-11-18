@@ -1,8 +1,8 @@
 """Tests for base scanner functionality."""
 import pytest
 import time
-from src.scanners.base import BaseScanner, RateLimiter
-from src.models import ScanTarget, Finding, Severity, VulnerabilityCategory, Remediation
+from continental.operators.base import BaseScanner, RateLimiter
+from continental.models import ScanTarget, Finding, Severity, VulnerabilityCategory, Remediation
 
 
 class MockScanner(BaseScanner):

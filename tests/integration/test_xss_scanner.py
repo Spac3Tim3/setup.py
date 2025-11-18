@@ -1,7 +1,7 @@
 """Integration tests for XSS scanner."""
 import pytest
-from src.scanners.xss_scanner import XSSScanner
-from src.models import ScanTarget, Severity, VulnerabilityCategory
+from continental.operators.xss_scanner import XSSScanner
+from continental.models import ScanTarget, Severity, VulnerabilityCategory
 
 
 @pytest.fixture

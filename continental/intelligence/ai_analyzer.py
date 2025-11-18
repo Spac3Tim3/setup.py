@@ -5,7 +5,7 @@ import logging
 from typing import List, Dict, Any, Optional
 from anthropic import Anthropic
 
-from src.models import Finding, Severity, VulnerabilityCategory, Remediation
+from continental.models import Finding, Severity, VulnerabilityCategory, Remediation
 
 logger = logging.getLogger(__name__)
 

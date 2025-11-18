@@ -1,7 +1,7 @@
 """Integration tests for security pipeline."""
 import pytest
-from src.orchestrator.pipeline import SecurityPipeline
-from src.models import ScanConfig, ScanTarget, Severity
+from continental.contracts.pipeline import SecurityPipeline
+from continental.models import ScanConfig, ScanTarget, Severity
 
 
 @pytest.fixture
@@ -33,7 +33,7 @@ def test_pipeline_initialization(test_config):
 
 def test_pipeline_deduplicates_findings(test_config):
     """Test pipeline removes duplicate findings."""
-    from src.models import Finding, VulnerabilityCategory, Remediation
+    from continental.models import Finding, VulnerabilityCategory, Remediation
 
     pipeline = SecurityPipeline(test_config)
 
@@ -69,7 +69,7 @@ def test_pipeline_deduplicates_findings(test_config):
 
 def test_pipeline_filters_by_severity(test_config):
     """Test pipeline respects severity threshold."""
-    from src.models import Finding, VulnerabilityCategory, Remediation
+    from continental.models import Finding, VulnerabilityCategory, Remediation
 
     pipeline = SecurityPipeline(test_config)
 

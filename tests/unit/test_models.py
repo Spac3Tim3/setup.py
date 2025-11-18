@@ -1,7 +1,7 @@
 """Tests for core data models."""
 import pytest
 from datetime import datetime
-from src.models import (
+from continental.models import (
     Finding, Severity, VulnerabilityCategory,
     ScanReport, ScanTarget, ScanConfig,
     Remediation, ProofOfConcept, HTTPRequest, HTTPResponse

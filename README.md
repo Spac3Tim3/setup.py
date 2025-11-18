@@ -1,65 +1,342 @@
-📦 setup.py (for humans)
-=======================
+<div align="center">
 
-This repo exists to provide [an example setup.py] file, that can be used
-to bootstrap your next Python project. It includes some advanced
-patterns and best practices for `setup.py`, as well as some
-commented–out nice–to–haves.
+# 🏛️ THE CONTINENTAL
 
-For example, this `setup.py` provides a `$ python setup.py upload`
-command, which creates a *universal wheel* (and *sdist*) and uploads
-your package to [PyPi] using [Twine], without the need for an annoying
-`setup.cfg` file. It also creates/uploads a new git tag, automatically.
+**Professional Security Intelligence Platform**
 
-In short, `setup.py` files can be daunting to approach, when first
-starting out — even Guido has been heard saying, "everyone cargo cults
-thems". It's true — so, I want this repo to be the best place to
-copy–paste from :)
+*"In this business, precision is everything."*
 
-[Check out the example!][an example setup.py]
+[![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-darkred.svg)](https://python.org)
+[![Continental Standard](https://img.shields.io/badge/Continental-Standard-2B2B2B.svg)](#)
 
-Installation
------
+[Installation](#installation) • [Quick Start](#quick-start) • [Rules](#the-rules) • [Documentation](#documentation)
 
-```bash
-cd your_project
+</div>
 
-# Download the setup.py file:
-#  download with wget
-wget https://raw.githubusercontent.com/navdeep-G/setup.py/master/setup.py -O setup.py
+---
 
-#  download with curl
-curl -O https://raw.githubusercontent.com/navdeep-G/setup.py/master/setup.py
+```
+╔═══════════════════════════════════════════════════════════╗
+║                    THE CONTINENTAL                        ║
+║            Professional Security Services                 ║
+║                                                           ║
+║         "No Business on Production Grounds"               ║
+╚═══════════════════════════════════════════════════════════╝
 ```
 
-To Do
------
+## Welcome to The Continental
 
--   Tests via `$ setup.py test` (if it's concise).
+The Continental is a professional security intelligence platform where security professionals conduct business. Like the establishment it's named after, we operate under strict rules and maintain the highest standards of professionalism.
 
-Pull requests are encouraged!
+### What is The Continental?
 
-More Resources
---------------
+An AI-powered security testing platform that:
+- 🎯 Identifies security markers (vulnerabilities)
+- 🤖 Employs AI intelligence for analysis
+- 📋 Generates professional dossiers (reports)
+- ⚔️ Deploys specialized operators (scanners)
+- 🏛️ Operates under The Rules at all times
 
--   [What is setup.py?] on Stack Overflow
--   [Official Python Packaging User Guide](https://packaging.python.org)
--   [The Hitchhiker's Guide to Packaging]
--   [Cookiecutter template for a Python package]
+## The Rules
 
-License
--------
+1. **No business on production grounds** - Test in authorized environments only
+2. **Professional conduct at all times** - Responsible disclosure required
+3. **Respect the ledger** - Honor all findings and remediation contracts
+4. **The price must be paid** - All vulnerabilities must be addressed
+5. **Courtesy. Professional courtesy** - Maintain professionalism in all interactions
 
-This is free and unencumbered software released into the public domain.
+## Installation
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any means.
+### Prerequisites
 
-  [an example setup.py]: https://github.com/navdeep-G/setup.py/blob/master/setup.py
-  [PyPi]: https://docs.python.org/3/distutils/packageindex.html
-  [Twine]: https://pypi.python.org/pypi/twine
-  [image]: https://farm1.staticflickr.com/628/33173824932_58add34581_k_d.jpg
-  [What is setup.py?]: https://stackoverflow.com/questions/1471994/what-is-setup-py
-  [The Hitchhiker's Guide to Packaging]: https://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/creation.html
-  [Cookiecutter template for a Python package]: https://github.com/audreyr/cookiecutter-pypackage
+- Python 3.11+
+- Docker & Docker Compose (optional, for testing)
+- Anthropic API key (for AI intelligence)
+
+### Setup
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure your operator credentials
+cp .env.example .env
+# Edit .env and add your ANTHROPIC_API_KEY
+```
+
+## Quick Start
+
+### Initiate Your First Contract
+
+```bash
+# Basic contract
+python -m continental.concierge contract \
+  --target http://localhost:8080 \
+  --operators sqli,xss \
+  --output ledger/
+
+# Professional contract with operator identification
+python -m continental.concierge contract \
+  --target https://staging.example.com \
+  --operators sqli,xss \
+  --operator-name "Your Name" \
+  --price-threshold HIGH \
+  --output contracts/staging/
+```
+
+### View Available Services
+
+```bash
+# Display the operations board
+python -m continental.concierge board
+
+# Review The Rules
+python -m continental.concierge rules
+
+# Verify contract status
+python -m continental.concierge verify \
+  --ledger contracts/contract_ledger.json \
+  --max-critical 0 \
+  --max-high 5
+```
+
+## Continental Services
+
+### Available Operators
+
+| Operator | Specialty | Status |
+|----------|-----------|--------|
+| ⚔️ SQLi Specialist | SQL Injection Detection | ✅ Active |
+| ⚔️ XSS Specialist | Cross-Site Scripting | ✅ Active |
+| 🤖 AI Intelligence | Enhanced Analysis | ✅ Active |
+
+### Marker Classification
+
+Vulnerabilities are classified by "price" (severity):
+
+- 🔴 **Critical**: ⚜⚜⚜⚜⚜ (5 gold coins) - Immediate action required
+- 🟠 **High**: ⚜⚜⚜ (3 gold coins) - Priority remediation
+- 🟡 **Medium**: ⚜ (1 gold coin) - Standard attention
+- 🟢 **Low**: Standard tracking
+
+## Dossier Structure
+
+After contract completion, you'll receive:
+
+```
+ledger/
+├── continental_dossier.md       # Complete intelligence report
+├── contract_ledger.json          # Structured data
+└── markers/                      # Individual marker reports
+    ├── marker_001_CRITICAL.md
+    ├── marker_002_HIGH.md
+    └── ...
+```
+
+Each marker report includes:
+- 🎯 Target identification
+- 📋 Proof of concept
+- 💰 Price assessment (CVSS)
+- 🔧 Remediation contract
+- 📚 Reference materials
+
+## Professional Usage
+
+### Contract Workflow
+
+```python
+from continental.models import ScanConfig, ScanTarget, Severity
+from continental.contracts.pipeline import SecurityPipeline
+from continental.dossiers.bug_bounty_reporter import BugBountyReporter
+
+# Initiate contract
+config = ScanConfig(
+    target=ScanTarget(
+        name="Corporate Application",
+        base_url="https://app.example.com"
+    ),
+    scanners=["sqli", "xss"],
+    enable_ai_analysis=True,
+    severity_threshold=Severity.HIGH
+)
+
+# Deploy operators
+pipeline = SecurityPipeline(config)
+contract_results = pipeline.execute()
+
+# Generate dossier
+dossier = BugBountyReporter(contract_results)
+dossier.generate_markdown_report("continental_intelligence.md")
+dossier.generate_individual_reports("markers/")
+```
+
+### High Table Enterprise
+
+For enterprise deployments, The Continental offers:
+
+- 🏛️ Dedicated concierge (support)
+- 🎯 Custom operator development
+- 📊 Real-time intelligence dashboards
+- ⚔️ Priority contract execution
+- 🔒 Enhanced confidentiality protocols
+
+## Project Structure
+
+```
+continental-platform/
+├── continental/              # Main package
+│   ├── operators/           # Security specialists (scanners)
+│   │   ├── base.py         # Operator framework
+│   │   ├── sqli_scanner.py # SQL injection specialist
+│   │   └── xss_scanner.py  # XSS specialist
+│   ├── intelligence/        # AI analysis suite
+│   │   └── ai_analyzer.py  # Claude integration
+│   ├── contracts/           # Contract orchestration
+│   │   └── pipeline.py     # Multi-operator coordination
+│   ├── dossiers/            # Intelligence reporting
+│   │   └── bug_bounty_reporter.py
+│   ├── models.py            # Data structures
+│   └── concierge.py         # Command interface
+├── tests/                   # Verification suite
+├── docker/                  # Test environments
+└── rules/                   # Configuration
+```
+
+## Testing Environment
+
+Deploy vulnerable test applications (for authorized testing):
+
+```bash
+# Start The Continental's practice range
+./docker/setup-vulnerable-targets.sh
+
+# Applications available:
+# - WebGoat:     http://localhost:8080
+# - DVWA:        http://localhost:8081
+# - Juice Shop:  http://localhost:3000
+```
+
+## Running Tests
+
+```bash
+# Execute verification suite
+pytest
+
+# With coverage report
+pytest --cov=continental --cov-report=html
+
+# Specific test categories
+pytest tests/unit/ -v
+pytest tests/integration/ -v
+```
+
+## Configuration
+
+### Environment Variables
+
+```bash
+# Required
+ANTHROPIC_API_KEY=sk-ant-xxxxx
+
+# Optional
+MAX_SCAN_DURATION=3600
+REQUESTS_PER_SECOND=10
+ENABLE_AI_ANALYSIS=true
+```
+
+### Operator Configuration
+
+```python
+config = ScanConfig(
+    target=ScanTarget(
+        name="Secure Application",
+        base_url="https://app.example.com",
+        rate_limit=5,              # Respect the establishment
+        timeout=30,
+        excluded_paths=["/admin"]  # No unauthorized areas
+    ),
+    scanners=["sqli", "xss"],
+    enable_ai_analysis=True,
+    severity_threshold=Severity.MEDIUM
+)
+```
+
+## Bug Bounty Integration
+
+Individual marker reports in `ledger/markers/` are formatted for direct submission to:
+
+- HackerOne
+- Bugcrowd
+- Synack
+- Intigriti
+
+Each includes:
+- Complete vulnerability details
+- Step-by-step proof of concept
+- CVSS scoring
+- Remediation guidance
+- Professional formatting
+
+## Easter Eggs
+
+```bash
+# Pay respects
+python -m continental.concierge respect --for winston
+
+# Check on what matters
+python -m continental.concierge respect --for dog
+
+# Display operations board
+python -m continental.concierge board
+```
+
+## Contributing
+
+The Continental welcomes professional contributions:
+
+- 🔧 New operator development
+- 📊 Enhanced intelligence features
+- 📋 Improved dossier formats
+- 🧪 Additional test coverage
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+
+MIT License - See [LICENSE](LICENSE)
+
+## Security & Responsibility
+
+**⚠️ CRITICAL NOTICE ⚠️**
+
+This tool is for **authorized security testing only**. The Continental operates under strict rules:
+
+- ✅ Obtain written authorization
+- ✅ Test only in designated environments
+- ✅ Follow responsible disclosure
+- ✅ Respect all boundaries
+- ❌ No unauthorized access
+- ❌ No production testing without approval
+
+> *"The Continental exists to serve our unique clientele. Those who break The Rules face consequences."*
+
+## Support
+
+- 📋 [Documentation](USAGE.md)
+- 🐛 [Issue Tracker](https://github.com/continental-security/platform/issues)
+- 💬 [Discussions](https://github.com/continental-security/platform/discussions)
+
+---
+
+<div align="center">
+
+**The Continental**
+
+*Where security professionals conduct business.*
+
+```
+⚜  Professional  •  Precise  •  Uncompromising  ⚜
+```
+
+</div>
