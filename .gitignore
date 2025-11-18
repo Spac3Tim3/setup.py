@@ -89,3 +89,10 @@ ENV/
 .ropeproject
 *.npy
 *.pkl
+
+# AI Bug Bounty Hunter specific
+reports/
+.pytest_cache/
+test_reports/
+bounty_reports/
+.DS_Store
